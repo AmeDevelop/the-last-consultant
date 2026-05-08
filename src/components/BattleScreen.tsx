@@ -104,7 +104,7 @@ export default function BattleScreen({ battle, background, introText }: Props) {
     }
   }
 
-  function resolveAfterEnemy(currentEnemyHp: number) {
+  function resolveAfterEnemy() {
     setTimeout(() => {
       setPhase('enemy_turn')
       const dmg = calcEnemyDmg()
@@ -143,7 +143,7 @@ export default function BattleScreen({ battle, background, introText }: Props) {
       }
       return
     }
-    resolveAfterEnemy(newEnemyHp)
+    resolveAfterEnemy()
   }
 
   function doSkill(skillId: string) {
@@ -173,13 +173,13 @@ export default function BattleScreen({ battle, background, introText }: Props) {
       triggerShake('enemy')
       addLog(`${skill.name}！ ${dmg}ダメージ！`)
       if (newEnemyHp <= 0) { setPhase('victory'); return }
-      resolveAfterEnemy(newEnemyHp)
+      resolveAfterEnemy()
       return
     }
     if (skill.effect === 'negotiate') {
       const chance = Math.min(0.7, player.stats.kyokan / 50)
       if (Math.random() < chance) { addLog('交渉成功！'); setPhase('victory') }
-      else { addLog('交渉失敗……'); resolveAfterEnemy(enemyHp) }
+      else { addLog('交渉失敗……'); resolveAfterEnemy() }
       return
     }
   }
