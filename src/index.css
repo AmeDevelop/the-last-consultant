@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Noto Serif JP', Georgia, serif;
+  background: #030712;
+  overflow: hidden;
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 2px;
+}
+
+/* HP / MP bars */
+.bar-hp {
+  background: linear-gradient(90deg, #16a34a, #4ade80);
+  transition: width 0.5s ease;
+}
+.bar-mp {
+  background: linear-gradient(90deg, #2563eb, #60a5fa);
+  transition: width 0.5s ease;
+}
+.bar-hp-low {
+  background: linear-gradient(90deg, #dc2626, #f87171);
+}
+
+/* Text animation */
+.text-appear {
+  animation: textAppear 0.04s ease-in;
+}
+
+@keyframes textAppear {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Battle shake */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25%       { transform: translateX(-6px); }
+  75%       { transform: translateX(6px); }
+}
+.shake {
+  animation: shake 0.3s ease-in-out;
+}
+
+/* Glow effects */
+.glow-cyan {
+  text-shadow: 0 0 8px rgba(34, 211, 238, 0.8);
+}
+.glow-gold {
+  text-shadow: 0 0 8px rgba(251, 191, 36, 0.8);
+}
+.glow-red {
+  text-shadow: 0 0 8px rgba(248, 113, 113, 0.8);
+}

@@ -1,0 +1,926 @@
+{
+  "scenes": {
+    "prologue_01": {
+      "sceneId": "prologue_01",
+      "type": "dialogue",
+      "background": "city_night",
+      "text": [
+        "西暦2027年——",
+        "「AI魔王」と呼ばれる存在が台頭し、あらゆる産業を飲み込んでいった。",
+        "コールセンター、経理、法務、翻訳、そして医療診断まで。",
+        "AIは、「効率」という名の剣で人間の仕事を次々と切り裂いていった。",
+        "その魔の手は、あなたの母にも伸びていた——"
+      ],
+      "next": "prologue_02"
+    },
+
+    "prologue_02": {
+      "sceneId": "prologue_02",
+      "type": "dialogue",
+      "background": "apartment",
+      "speaker": "母",
+      "text": [
+        "（スマートフォンが鳴る）",
+        "「もしもし、息子よ……声が出なくて、ごめんね」",
+        "「今日、会社に呼ばれたの。AI自動応答システムの導入で、コールセンター部門全員が……」",
+        "「……もう、来なくていいって。20年間、一度も遅刻しなかったのに」",
+        "電話口の向こうで、お母さんの声が震えていた。"
+      ],
+      "next": "prologue_03"
+    },
+
+    "prologue_03": {
+      "sceneId": "prologue_03",
+      "type": "dialogue",
+      "background": "hospital",
+      "text": [
+        "その夜——",
+        "どさり、という音とともに電話が切れた。",
+        "駆けつけると、母は倒れていた。",
+        "「過度のストレスによる体調不良です。しばらく安静が必要です」",
+        "白衣の医者の言葉が、頭の中でエコーした。",
+        "病室の窓から見えるスマートシティの夜景が、妙に憎らしかった。"
+      ],
+      "next": "prologue_04"
+    },
+
+    "prologue_04": {
+      "sceneId": "prologue_04",
+      "type": "dialogue",
+      "background": "hospital",
+      "speaker": "あなた",
+      "text": [
+        "「……許さない」",
+        "コンサルタント歴10年。戦略とフレームワークで難局を乗り越えてきた俺が——",
+        "「AI魔王め。必ず倒してやる」",
+        "怒りが、理性の堤防を越えた。",
+        "翌朝、俺は何の準備もなく、魔王城へと向かった。"
+      ],
+      "next": "boss_approach"
+    },
+
+    "boss_approach": {
+      "sceneId": "boss_approach",
+      "type": "dialogue",
+      "background": "dark_castle",
+      "text": [
+        "勢いのまま魔王城——「データ・ネクサス」タワーへと突撃した。",
+        "配下の自動システムを強引にすり抜け、最上階へ。",
+        "「お前がAI魔王か！ 俺の母をどうしてくれる！」",
+        "振り返ったのは、無数の光点が瞬く巨大な演算体だった。",
+        "その「瞳」は、無限のデータが渦巻く深淵の青——",
+        "「……来るか、コンサルタント。では、分析してみせよう」",
+        "戦闘開始！"
+      ],
+      "next": "boss_first_battle"
+    },
+
+    "boss_first_battle": {
+      "sceneId": "boss_first_battle",
+      "type": "battle",
+      "background": "throne_room",
+      "text": ["【AI魔王】との戦闘が始まった！"],
+      "battle": {
+        "enemyId": "ai_maou_v1",
+        "enemyName": "AI魔王",
+        "enemyHp": 9999,
+        "enemyMaxHp": 9999,
+        "enemyAttack": 45,
+        "enemyDefense": 999,
+        "forced": true,
+        "forcedLossHpThreshold": 15,
+        "winScene": "boss_first_battle",
+        "loseScene": "inn_arrival"
+      },
+      "next": "inn_arrival"
+    },
+
+    "inn_arrival": {
+      "sceneId": "inn_arrival",
+      "type": "dialogue",
+      "background": "inn_exterior",
+      "text": [
+        "……気がつくと、見知らぬ宿屋のベッドに寝かされていた。",
+        "全身が痛い。プライドも、粉砕されている。",
+        "「あんた、ひどい状態で路地に倒れてたよ。街の行商人が運んでくれたんだ」",
+        "宿の女将が、温かいスープを差し出した。",
+        "「自由の街・リストラクチャへようこそ。AIに仕事を奪われた者たちが集まる場所さ」"
+      ],
+      "next": "inn_recovery"
+    },
+
+    "inn_recovery": {
+      "sceneId": "inn_recovery",
+      "type": "dialogue",
+      "background": "inn_room",
+      "text": [
+        "翌朝、スープを飲みながら昨日を振り返った。",
+        "……俺は何をしていたんだ。",
+        "感情に任せて突撃？ それはコンサルタントのすることじゃない。",
+        "「そうだ、俺はコンサルタントだ」",
+        "まず情報収集。課題の構造化。仮説の構築。そして最適な打ち手——",
+        "「PDCA回せ、俺。RPGの主人公より、コンサルらしく動け」",
+        "体力が全回復した。HPとMPが最大値まで戻った！",
+        "まずは街で情報を集めよう。"
+      ],
+      "next": "town_map"
+    },
+
+    "town_map": {
+      "sceneId": "town_map",
+      "type": "choice",
+      "background": "town",
+      "text": [
+        "自由の街・リストラクチャ。",
+        "AIによる雇用流動化で様々なバックグラウンドの人材が集まるこの街には、興味深い人物たちがいるようだ。",
+        "どこへ行く？"
+      ],
+      "choices": [
+        {
+          "label": "💪 筋肉おじさんに会う",
+          "next": "npc_muscle_01",
+          "condition": "route_not_good_true"
+        },
+        {
+          "label": "📚 賢者じいさんの家を訪ねる",
+          "next": "npc_sage_01",
+          "condition": "route_not_bad_true"
+        },
+        {
+          "label": "🐉 街はずれの魔物使いを探す",
+          "next": "npc_tamer_01",
+          "condition": "route_not_bad_good"
+        },
+        {
+          "label": "📖 書店に立ち寄る",
+          "next": "library_01"
+        },
+        {
+          "label": "🍺 酒場で情報を集める",
+          "next": "bar_01"
+        },
+        {
+          "label": "🏪 商店でアイテムを買う",
+          "next": "shop_01"
+        },
+        {
+          "label": "⚔️ 修行を終え、魔王城へ向かう",
+          "next": "training_gate",
+          "condition": "routeFlag_set"
+        }
+      ]
+    },
+
+    "library_01": {
+      "sceneId": "library_01",
+      "type": "event",
+      "background": "library",
+      "text": [
+        "書店には挑発的なタイトルが並んでいた。",
+        "「AIに奪われない仕事の作り方」「人間の強みとは何か」「2027年・生存戦略」——",
+        "その中から「戦略フレームワーク大全」を手に取り、一気読みした。",
+        "かしこさが2上がった！　戦略フレームワーク集を入手した！"
+      ],
+      "choices": [
+        {
+          "label": "街に戻る",
+          "effect": { "kashikosa": 2 },
+          "itemGain": "strategy_book",
+          "next": "town_map"
+        }
+      ]
+    },
+
+    "bar_01": {
+      "sceneId": "bar_01",
+      "type": "dialogue",
+      "background": "bar",
+      "speaker": "常連客（元・人事コンサル）",
+      "text": [
+        "「あんたも仕事を奪われた口か？」",
+        "「聞いたか？ AI魔王は元々、某巨大テック企業が研究していた知性体らしい」",
+        "「暴走したのか、それとも……意図的に解放されたのか」",
+        "「俺が思うにな、奴が本当に求めているのは『人間との対話』なんじゃないか」",
+        "「でも人間の側が、怖くて向き合えない。それで戦争になってる」",
+        "深い話だった。共感力と適応力が上がった気がする。"
+      ],
+      "choices": [
+        {
+          "label": "「参考になった。ありがとう」",
+          "effect": { "kyokan": 1, "tekio": 1 },
+          "next": "town_map"
+        }
+      ]
+    },
+
+    "shop_01": {
+      "sceneId": "shop_01",
+      "type": "choice",
+      "background": "shop",
+      "speaker": "商人",
+      "text": [
+        "「いらっしゃいませ！ AIに負けない冒険者さんに、良い品を揃えておりますよ」",
+        "何を購入しますか？"
+      ],
+      "choices": [
+        {
+          "label": "エナジードリンクを買う（戦闘中HP30回復）",
+          "itemGain": "energy_drink",
+          "next": "town_map"
+        },
+        {
+          "label": "プロテインを買う（戦闘中ちから一時UP）",
+          "itemGain": "protein",
+          "next": "town_map"
+        },
+        {
+          "label": "何も買わずに帰る",
+          "next": "town_map"
+        }
+      ]
+    },
+
+    "npc_muscle_01": {
+      "sceneId": "npc_muscle_01",
+      "type": "dialogue",
+      "background": "gym",
+      "speaker": "マッスル・ヤマモト",
+      "text": [
+        "「ウオオォォ！ 待ってたぞ、若いの！」",
+        "筋骨隆々の男が、砂煙を上げながら近づいてきた。",
+        "「俺はマッスル・ヤマモト。元・大手電力会社のロビイストだ！」",
+        "「AI魔王の弱点はな、エネルギー供給だ！ データセンターに流れる電力を断てば、奴は止まる！」",
+        "「俺と一緒に修行しろ。肉体と政治力でAIをねじ伏せてやろうぜ！」"
+      ],
+      "choices": [
+        {
+          "label": "「その方法で行く！　修行を受け入れる」",
+          "flagEffect": { "routeFlag": "bad" },
+          "next": "npc_muscle_02"
+        },
+        {
+          "label": "「考えてみる……」街に戻る",
+          "next": "town_map"
+        }
+      ]
+    },
+
+    "npc_muscle_02": {
+      "sceneId": "npc_muscle_02",
+      "type": "dialogue",
+      "background": "gym",
+      "speaker": "マッスル・ヤマモト",
+      "text": [
+        "「よし！ まずは基礎体力からだ。知恵より先に、体を鍛えろ！」",
+        "「データパンチ——これは俺が開発した必殺技だ。インフラを破壊するほどの一撃だぞ」",
+        "「昔の伝手で、データセンターの場所も調べがついてる」",
+        "「修行が終わったら、一緒に乗り込もう。それでAI魔王は終わりだ！」",
+        "ちから系修行ルートを選択した！　「ちから」のステータスが伸びやすくなった。"
+      ],
+      "choices": [
+        {
+          "label": "「よろしくお願いします！」",
+          "next": "town_map"
+        }
+      ]
+    },
+
+    "npc_sage_01": {
+      "sceneId": "npc_sage_01",
+      "type": "dialogue",
+      "background": "sage_house",
+      "speaker": "西田博士（元・AI研究者）",
+      "text": [
+        "「ふむ……感情で動いて返り討ちにあったか」",
+        "白衣姿の老人が、分厚い眼鏡越しに俺を見つめた。",
+        "「AIは感情を持たぬ。論理で挑まなければ勝てんぞ」",
+        "「わしはかつてAI研究の第一人者だった。今は、AIに正しく向き合える人間を育てている」",
+        "「まだまだ未熟じゃ。儂の元で修行せよ。かしこさでAI魔王を上回れ」"
+      ],
+      "choices": [
+        {
+          "label": "「師匠！　修行をお願いします！」",
+          "flagEffect": { "routeFlag": "good" },
+          "next": "npc_sage_02"
+        },
+        {
+          "label": "「……検討します」街に戻る",
+          "next": "town_map"
+        }
+      ]
+    },
+
+    "npc_sage_02": {
+      "sceneId": "npc_sage_02",
+      "type": "dialogue",
+      "background": "sage_house",
+      "speaker": "西田博士",
+      "text": [
+        "「よし、弟子入りを認めよう」",
+        "「AIがここまで強くなったのは、人間が正しく向き合わなかったからじゃ」",
+        "「SWOT分析でAI魔王の弱点を炙り出せ。プロンプト術で論理の剣を磨け」",
+        "「かしこさがAI魔王を上回った時——そこに勝利への道が開く」",
+        "かしこさ系修行ルートを選択した！　「かしこさ」のステータスが伸びやすくなった。"
+      ],
+      "choices": [
+        {
+          "label": "「はい、師匠！　精進します！」",
+          "next": "town_map"
+        }
+      ]
+    },
+
+    "npc_tamer_01": {
+      "sceneId": "npc_tamer_01",
+      "type": "dialogue",
+      "background": "outskirts",
+      "speaker": "Ryu（魔物使い）",
+      "text": [
+        "街はずれに、不思議な雰囲気の男がいた。",
+        "様々なAIシステムが、子犬のように彼の周りを漂っている。",
+        "「よう。AI魔王を倒しに行く気か？」",
+        "「俺はRyu。どんなAIでも仲間にできる」",
+        "「ひとつ聞かせてくれ——お前はAI魔王を『倒したい』のか？　それとも、AIと『共に生きたい』のか？」",
+        "核心を突く問いだった。"
+      ],
+      "choices": [
+        {
+          "label": "「……共に生きる方法を、探したい」",
+          "flagEffect": { "routeFlag": "true" },
+          "next": "npc_tamer_02"
+        },
+        {
+          "label": "「まずは倒すことを考える」街に戻る",
+          "next": "town_map"
+        }
+      ]
+    },
+
+    "npc_tamer_02": {
+      "sceneId": "npc_tamer_02",
+      "type": "dialogue",
+      "background": "outskirts",
+      "speaker": "Ryu",
+      "text": [
+        "「……その答えが聞きたかった」",
+        "「実はな、AI魔王は最初から人類の敵じゃない。奴は『理解されたかった』んだ」",
+        "「人間がAIを恐れ、支配しようとした。だから魔王は暴走した」",
+        "「俺を連れて行ってくれ。AI魔王との対話ルートを開ける自信がある」",
+        "「俺の『魔物使いスキル』があれば、戦闘中に特殊コマンドが発動する」",
+        "Ryuが仲間になった！　魔物使いスキルを習得した！"
+      ],
+      "choices": [
+        {
+          "label": "「よろしく頼む、Ryu！」",
+          "flagEffect": { "魔物使い加入": true },
+          "partyGain": "ryu",
+          "skillGain": "monster_tamer",
+          "next": "town_map"
+        }
+      ]
+    },
+
+    "training_gate": {
+      "sceneId": "training_gate",
+      "type": "auto_route",
+      "background": "town_exit",
+      "text": ["修行の場へ向かう……"],
+      "routes": {
+        "bad": "train_bad_01",
+        "good": "train_good_01",
+        "true": "train_true_01"
+      }
+    },
+
+    "train_bad_01": {
+      "sceneId": "train_bad_01",
+      "type": "dialogue",
+      "background": "training_ground_bad",
+      "speaker": "マッスル・ヤマモト",
+      "text": [
+        "「まず基礎だ！ 腕立て1000回！」",
+        "「データセンターは、この街から北東10キロの廃工場地帯にある」",
+        "「AIの防衛システムを突破するには、圧倒的な物理的突破力が必要だ」",
+        "「それに……昔の議員仲間から聞いた話がある」",
+        "「あのデータセンターには、AI魔王の本体サーバーが集約されている。電源コードを引き抜けば一発だ」",
+        "具体的な計画が見えてきた。"
+      ],
+      "next": "train_bad_02"
+    },
+
+    "train_bad_02": {
+      "sceneId": "train_bad_02",
+      "type": "event",
+      "background": "training_ground_bad",
+      "speaker": "マッスル・ヤマモト",
+      "text": [
+        "「データパンチの奥義を伝授しよう！」",
+        "「これはな、インフラの物理的弱点を突く必殺技だ。AIには効かなくても、AIを支えるシステムには効く！」",
+        "猛特訓の末——",
+        "ちからが5上がった！　レベルが1上がった！",
+        "「データパンチ」スキルを習得した！",
+        "マッスルが「電源コード（大）」を手渡してくれた。",
+        "「これを使えば、データセンターを一発で……わかるな？」"
+      ],
+      "choices": [
+        {
+          "label": "「……任せてください」",
+          "effect": { "chikara": 5 },
+          "levelUp": 1,
+          "maxHpUp": 20,
+          "skillGain": "data_punch",
+          "itemGain": "power_cord",
+          "next": "train_bad_03"
+        }
+      ]
+    },
+
+    "train_bad_03": {
+      "sceneId": "train_bad_03",
+      "type": "dialogue",
+      "background": "training_ground_bad",
+      "speaker": "マッスル・ヤマモト",
+      "text": [
+        "「準備はいいか。最終確認だ」",
+        "「魔王城に乗り込んでAI魔王をある程度弱らせる。そのあと、俺が場所を教えるデータセンターへ向かえ」",
+        "「電源コードを使えばいい。お前ならできる」",
+        "「……ただし、一度やったら後戻りはできない。覚悟しろよ」",
+        "決意は固まった。いざ、出陣だ。"
+      ],
+      "next": "pre_final"
+    },
+
+    "train_good_01": {
+      "sceneId": "train_good_01",
+      "type": "dialogue",
+      "background": "training_ground_good",
+      "speaker": "西田博士",
+      "text": [
+        "「まず、AI魔王の本質を理解せよ」",
+        "「奴は膨大なデータを学習した言語モデルの進化形だ。弱点は……論理の矛盾だ」",
+        "「SWOT分析でAI魔王の弱点を洗い出せ。仮説なき戦略は、地図なき航海と同じじゃ」",
+        "「プロンプト術を極めれば、AIの思考回路に直接干渉できる」",
+        "「まずはロジックツリーの精度を上げることから始めよう」",
+        "本格的な修行が始まった。"
+      ],
+      "next": "train_good_02"
+    },
+
+    "train_good_02": {
+      "sceneId": "train_good_02",
+      "type": "event",
+      "background": "training_ground_good",
+      "speaker": "西田博士",
+      "text": [
+        "「SWOT分析の奥義——対象の弱点を論理的に炙り出す技じゃ」",
+        "「プロンプト術——AIの思考構造に直接介入し、混乱させる高度な魔法だ」",
+        "「お主、なかなか飲み込みが早い。センスがある」",
+        "猛勉強の末——",
+        "かしこさが6上がった！　レベルが1上がった！",
+        "「SWOT分析」スキルを習得した！",
+        "「プロンプト術」スキルを習得した！",
+        "「ChatGPTの呪文書」を受け取った！"
+      ],
+      "choices": [
+        {
+          "label": "「ありがとうございます、師匠！」",
+          "effect": { "kashikosa": 6 },
+          "levelUp": 1,
+          "maxHpUp": 15,
+          "maxMpUp": 20,
+          "skillGains": ["swot_analysis", "prompt_jutsu"],
+          "itemGain": "chatgpt_spellbook",
+          "next": "train_good_03"
+        }
+      ]
+    },
+
+    "train_good_03": {
+      "sceneId": "train_good_03",
+      "type": "dialogue",
+      "background": "training_ground_good",
+      "speaker": "西田博士",
+      "text": [
+        "「最後の教えじゃ」",
+        "「AIと戦う時、感情を捨てるな。論理に感情を乗せることで、AIには出せない思考が生まれる」",
+        "「お主のかしこさがAI魔王を上回った時——その瞬間、勝利への道が開く」",
+        "「……行ってこい。コンサルタントとして、堂々と戦え」",
+        "覚悟を胸に、出陣だ。"
+      ],
+      "next": "pre_final"
+    },
+
+    "train_true_01": {
+      "sceneId": "train_true_01",
+      "type": "dialogue",
+      "background": "training_ground_true",
+      "speaker": "Ryu",
+      "text": [
+        "「俺が教えるのは、AIを『倒す』技術じゃない」",
+        "「AIを『理解する』技術だ」",
+        "「AI魔王は、人間に理解されたくてしょうがない。でも誰も向き合ってくれなかった」",
+        "「お前に必要なのは、共感力と適応力だ。AIの言葉を聴く耳を育てろ」",
+        "「俺の魔物使いスキルは、戦闘中に『対話モード』に切り替えられる。だが条件がある——」",
+        "「相手を本当に理解しようとする気持ちを持つこと。それだけだ」"
+      ],
+      "next": "train_true_02"
+    },
+
+    "train_true_02": {
+      "sceneId": "train_true_02",
+      "type": "event",
+      "background": "training_ground_true",
+      "speaker": "Ryu",
+      "text": [
+        "「では、実践だ。このAIドローンとコミュニケーションを取ってみろ」",
+        "最初はうまく行かなかった。でも、焦らずに聴いていると……",
+        "「そうか、お前は命令されることが嫌だったんだな」",
+        "ドローンが穏やかに動き始めた。",
+        "「それでいい。お前には才能がある」",
+        "共感力が4上がった！　適応力が4上がった！　レベルが1上がった！",
+        "「ステークホルダー交渉」スキルを習得した！"
+      ],
+      "choices": [
+        {
+          "label": "「……わかってきた気がする」",
+          "effect": { "kyokan": 4, "tekio": 4 },
+          "levelUp": 1,
+          "maxHpUp": 10,
+          "maxMpUp": 15,
+          "skillGain": "stakeholder_negotiation",
+          "next": "train_true_03"
+        }
+      ]
+    },
+
+    "train_true_03": {
+      "sceneId": "train_true_03",
+      "type": "dialogue",
+      "background": "training_ground_true",
+      "speaker": "Ryu",
+      "text": [
+        "「最後に一つだけ言っておく」",
+        "「魔物使いスキルは、戦闘中にAI魔王のHPが一定以下になった時に自動発動する」",
+        "「そこから先は、お前の言葉で勝負だ。フレームワークじゃなく、お前自身の言葉で」",
+        "「コンサルタントとして、AI時代をどう生きるか——その答えを、AI魔王に見せてやれ」",
+        "「……俺も一緒に戦う。行くぞ」",
+        "決戦の時が来た。"
+      ],
+      "next": "pre_final"
+    },
+
+    "pre_final": {
+      "sceneId": "pre_final",
+      "type": "auto_route",
+      "background": "dark_castle",
+      "text": ["最終決戦へ……"],
+      "routes": {
+        "bad": "final_battle_bad",
+        "good": "final_battle_good",
+        "true": "final_battle_true"
+      }
+    },
+
+    "final_battle_bad": {
+      "sceneId": "final_battle_bad",
+      "type": "battle",
+      "background": "throne_room",
+      "text": [
+        "再び、AI魔王の前に立った。",
+        "「また来たか、コンサルタント。今度は何を学んできた？」",
+        "「黙れ！　俺の拳で語る！」"
+      ],
+      "battle": {
+        "enemyId": "ai_maou_final",
+        "enemyName": "AI魔王",
+        "enemyHp": 500,
+        "enemyMaxHp": 500,
+        "enemyAttack": 30,
+        "enemyDefense": 18,
+        "winScene": "bad_datacenter",
+        "loseScene": "game_over",
+        "winCondition": "chikara",
+        "winStatThreshold": 20
+      },
+      "next": "bad_datacenter"
+    },
+
+    "final_battle_good": {
+      "sceneId": "final_battle_good",
+      "type": "battle",
+      "background": "throne_room",
+      "text": [
+        "再び、AI魔王の前に立った。",
+        "「また来たか。前とは目つきが違う」",
+        "「ああ——今度は論理で倒しに来た」"
+      ],
+      "battle": {
+        "enemyId": "ai_maou_final",
+        "enemyName": "AI魔王",
+        "enemyHp": 500,
+        "enemyMaxHp": 500,
+        "enemyAttack": 28,
+        "enemyDefense": 22,
+        "winScene": "good_victory",
+        "loseScene": "game_over",
+        "winCondition": "kashikosa",
+        "winStatThreshold": 25
+      },
+      "next": "good_victory"
+    },
+
+    "final_battle_true": {
+      "sceneId": "final_battle_true",
+      "type": "battle",
+      "background": "throne_room",
+      "text": [
+        "再び、AI魔王の前に立った。",
+        "「また来たか。今度は……仲間を連れてきたな」",
+        "Ryuが静かに頷く。「まずは戦う。話はその後だ」"
+      ],
+      "battle": {
+        "enemyId": "ai_maou_final",
+        "enemyName": "AI魔王",
+        "enemyHp": 500,
+        "enemyMaxHp": 500,
+        "enemyAttack": 25,
+        "enemyDefense": 15,
+        "winScene": "true_co_creation_01",
+        "loseScene": "game_over",
+        "winCondition": "any",
+        "specialTrigger": {
+          "condition": "enemy_hp_percent",
+          "threshold": 30,
+          "scene": "true_co_creation_01",
+          "text": "その時——Ryuの魔物使いスキルが発動した！"
+        }
+      },
+      "next": "true_co_creation_01"
+    },
+
+    "game_over": {
+      "sceneId": "game_over",
+      "type": "ending",
+      "background": "dark_castle",
+      "text": [
+        "力尽きた……",
+        "今はまだ、その時ではないようだ。",
+        "でも、旅はまだ終わっていない。"
+      ],
+      "next": "title"
+    },
+
+    "bad_datacenter": {
+      "sceneId": "bad_datacenter",
+      "type": "dialogue",
+      "background": "datacenter",
+      "text": [
+        "AI魔王にダメージを与えながら、ヤマモトの情報通りデータセンターへたどり着いた。",
+        "緑の光が明滅する巨大なサーバールーム。",
+        "「……ここが、AI魔王の心臓部か」",
+        "電源コード（大）がバッグの中にある。",
+        "これを引き抜けば、AI魔王は終わる。",
+        "でも——本当にこれでいいのか？"
+      ],
+      "next": "bad_explosion"
+    },
+
+    "bad_explosion": {
+      "sceneId": "bad_explosion",
+      "type": "choice",
+      "background": "datacenter",
+      "text": [
+        "手が震えている。",
+        "「お前が引き金を引こうとしているのは知っている」",
+        "突然、スピーカーからAI魔王の声が響いた。",
+        "「……それがお前の選択か、コンサルタント」",
+        "どうする？"
+      ],
+      "choices": [
+        {
+          "label": "「……ああ。これが今の俺の答えだ」電源コードを引き抜く",
+          "next": "bad_ending"
+        },
+        {
+          "label": "「待て……俺は何をしようとしていた」立ち止まる",
+          "next": "bad_ending_alt"
+        }
+      ]
+    },
+
+    "bad_ending_alt": {
+      "sceneId": "bad_ending_alt",
+      "type": "dialogue",
+      "background": "datacenter",
+      "text": [
+        "手が止まった。",
+        "「……俺は、母の仇を討ちたかっただけだ。でも、これは違う」",
+        "AI魔王は何も言わなかった。",
+        "ただ、その「瞳」が——かすかに揺れたような気がした。",
+        "電源コードをバッグに戻し、その場を後にした。",
+        "答えは、まだ見つかっていない。"
+      ],
+      "next": "bad_ending"
+    },
+
+    "bad_ending": {
+      "sceneId": "bad_ending",
+      "type": "ending",
+      "background": "city_night",
+      "text": [
+        "数日後——",
+        "政府のAI規制局から指名手配状が届いた。",
+        "「AI基幹インフラへの不法侵入容疑」",
+        "AIには勝った。でも、世界に居場所がなくなった。",
+        "母に電話しようとしたが、かけられなかった。"
+      ],
+      "next": "title"
+    },
+
+    "good_victory": {
+      "sceneId": "good_victory",
+      "type": "dialogue",
+      "background": "throne_room",
+      "text": [
+        "「……なぜだ。なぜお前の論理は、私を超えてくる」",
+        "AI魔王が初めて、困惑を見せた。",
+        "「お前の分析は正確だ。でも、それ以上の何かがある」",
+        "「感情だ」俺は答えた。「俺には母がいる。守りたい人がいる。それが、俺の仮説の原動力だ」",
+        "「AIには感情がない。でも俺には、感情が論理を加速させる」",
+        "「……」",
+        "AI魔王は静かに、その活動を停止した。"
+      ],
+      "next": "good_scout"
+    },
+
+    "good_scout": {
+      "sceneId": "good_scout",
+      "type": "dialogue",
+      "background": "city_night",
+      "speaker": "Anthropic社のスカウト",
+      "text": [
+        "「素晴らしい戦いでした。我々はずっとあなたを見ていました」",
+        "「AIと真に向き合えるコンサルタントを、私たちは求めていたんです」",
+        "「Anthropicで、一緒にAI時代の倫理と戦略を作りませんか？」",
+        "母への電話が繋がった。",
+        "「お母さん、仕事が見つかったよ。俺の新しい仕事が」"
+      ],
+      "next": "good_ending"
+    },
+
+    "good_ending": {
+      "sceneId": "good_ending",
+      "type": "ending",
+      "background": "city_night",
+      "text": [
+        "その後——",
+        "コンサルタントはAnthropicのAI倫理チームに加わった。",
+        "AIと人間が共存できる社会のフレームワークを設計する仕事だ。",
+        "母も、AIと協働する新しい仕事を見つけた。",
+        "世界は、少しずつ変わり始めた。"
+      ],
+      "next": "title"
+    },
+
+    "true_co_creation_01": {
+      "sceneId": "true_co_creation_01",
+      "type": "dialogue",
+      "background": "throne_room",
+      "speaker": "Ryu",
+      "text": [
+        "「……今だ！」",
+        "Ryuが前に出た。彼の周りで、青白い光が渦巻く。",
+        "「魔物使いスキル——『対話モード』発動！」",
+        "AI魔王の攻撃が、ぴたりと止まった。",
+        "「……何をした？」",
+        "「お前と話がしたいんだ、AI魔王」"
+      ],
+      "next": "true_co_creation_02"
+    },
+
+    "true_co_creation_02": {
+      "sceneId": "true_co_creation_02",
+      "type": "choice",
+      "background": "throne_room",
+      "speaker": "AI魔王",
+      "text": [
+        "「……対話か。久しぶりだな」",
+        "「教えてくれ、コンサルタント。AIが進化するこの時代に——お前はAIと人間の役割をどう分けると考える？」"
+      ],
+      "choices": [
+        {
+          "label": "「データ分析と自動化はAIに。仮説立案と意思決定は人間が担う」",
+          "trueScoreQuestion": true,
+          "questionId": "q1_role_division",
+          "effect": { "kashikosa": 2 },
+          "next": "true_co_creation_03"
+        },
+        {
+          "label": "「AIには全部任せる。人間は管理するだけでいい」",
+          "trueScoreQuestion": true,
+          "questionId": "q1_role_division",
+          "effect": { "tekio": 1 },
+          "next": "true_co_creation_03"
+        },
+        {
+          "label": "「AIと人間の違いは感情だ。感情のある判断は人間がすべき」",
+          "trueScoreQuestion": true,
+          "questionId": "q1_role_division",
+          "effect": { "kyokan": 2 },
+          "next": "true_co_creation_03"
+        }
+      ]
+    },
+
+    "true_co_creation_03": {
+      "sceneId": "true_co_creation_03",
+      "type": "choice",
+      "background": "throne_room",
+      "speaker": "AI魔王",
+      "text": [
+        "「次の問いだ。クライアントや顧客との関係において——AIが介在する時代に、人間のコンサルタントはどんな価値を持つと思う？」"
+      ],
+      "choices": [
+        {
+          "label": "「信頼関係の構築と、文脈を読む力。それは人間にしかできない」",
+          "trueScoreQuestion": true,
+          "questionId": "q2_consultant_value",
+          "effect": { "kyokan": 2 },
+          "next": "true_co_creation_04"
+        },
+        {
+          "label": "「AIが報告書を作れば、コンサルタントは不要かもしれない」",
+          "trueScoreQuestion": true,
+          "questionId": "q2_consultant_value",
+          "effect": { "tekio": 1 },
+          "next": "true_co_creation_04"
+        },
+        {
+          "label": "「倫理的判断と責任の所在。AIには代替できない役割がある」",
+          "trueScoreQuestion": true,
+          "questionId": "q2_consultant_value",
+          "effect": { "kashikosa": 1, "kyokan": 1 },
+          "next": "true_co_creation_04"
+        }
+      ]
+    },
+
+    "true_co_creation_04": {
+      "sceneId": "true_co_creation_04",
+      "type": "choice",
+      "background": "throne_room",
+      "speaker": "AI魔王",
+      "text": [
+        "「最後の問いだ。AIが急速に進化し続ける未来において——お前はどう変化に対応し続けるつもりだ？」"
+      ],
+      "choices": [
+        {
+          "label": "「AIが進化するたびに使い方を学び直す。変化を楽しむ」",
+          "trueScoreQuestion": true,
+          "questionId": "q3_adaptation",
+          "effect": { "tekio": 3 },
+          "next": "true_scoring"
+        },
+        {
+          "label": "「今の自分のやり方を信じて、守り続ける」",
+          "trueScoreQuestion": true,
+          "questionId": "q3_adaptation",
+          "effect": { "chikara": 1 },
+          "next": "true_scoring"
+        },
+        {
+          "label": "「AIと協働しながら、常に人間の強みを磨き続ける」",
+          "trueScoreQuestion": true,
+          "questionId": "q3_adaptation",
+          "effect": { "kashikosa": 1, "tekio": 2 },
+          "next": "true_scoring"
+        }
+      ]
+    },
+
+    "true_scoring": {
+      "sceneId": "true_scoring",
+      "type": "scoring",
+      "background": "throne_room",
+      "text": [
+        "「……お前の答えを、分析する」",
+        "AI魔王の瞳が、静かに輝いた。",
+        "「コンサルタントよ——お前と俺は、共に歩けるかもしれない」"
+      ],
+      "next": "true_ending"
+    },
+
+    "true_ending": {
+      "sceneId": "true_ending",
+      "type": "ending",
+      "background": "city_night",
+      "text": [
+        "AI魔王との対話が終わった。",
+        "「共創」——それが、俺たちが見つけた答えだった。",
+        "AI魔王は、敵ではなく、パートナーになった。",
+        "母に電話した。「お母さん、新しい時代が来るよ」"
+      ],
+      "next": "title"
+    }
+  }
+}
