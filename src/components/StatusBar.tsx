@@ -18,7 +18,7 @@ export default function StatusBar() {
     flags.routeFlag === 'true' ? '🤝 共創ルート' : ''
 
   return (
-    <div className="flex items-center gap-4 px-4 py-2 bg-gray-900/90 border-b border-gray-700 text-xs font-game">
+    <div className="flex items-center gap-2 sm:gap-4 px-2 sm:px-4 py-1.5 bg-gray-900/90 border-b border-gray-700 text-xs font-game">
       {/* Name & Level */}
       <div className="text-amber-400 font-bold whitespace-nowrap">
         Lv{player.level} {player.name}

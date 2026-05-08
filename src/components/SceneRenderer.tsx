@@ -98,53 +98,59 @@ export default function SceneRenderer({ scene }: Props) {
 
   return (
     <div
-      className="w-full h-full flex flex-col relative cursor-pointer select-none"
+      className="w-full h-full flex flex-col relative select-none"
       style={{ background: getBackground(scene.background) }}
-      onClick={!showChoices ? advance : undefined}
     >
-      {/* Scene illustration area (decorative) */}
-      <div className="flex-1 flex items-center justify-center min-h-0">
+      {/* Scene illustration — 固定高さ、モバイルでは小さく */}
+      <div
+        className="flex items-center justify-center shrink-0 cursor-pointer"
+        style={{ height: 'clamp(60px, 20vh, 160px)' }}
+        onClick={!showChoices ? advance : undefined}
+      >
         <SceneIllustration background={scene.background} />
       </div>
 
-      {/* Text box */}
-      <div className="relative">
-        {/* Speaker name */}
-        {scene.speaker && (
-          <div className="absolute -top-7 left-4 px-3 py-1 bg-cyan-900 border border-cyan-600 rounded text-cyan-300 text-sm font-game font-bold z-10">
-            {scene.speaker}
-          </div>
-        )}
-
-        <div className="bg-gray-900/95 border-t border-gray-600 p-4 min-h-[120px] flex flex-col justify-between">
-          <p className="text-gray-100 font-game text-base leading-relaxed">
-            {displayedText}
-            {isTyping && <span className="animate-blink text-cyan-400">▌</span>}
-          </p>
-
-          {!showChoices && (
-            <div className="flex justify-end mt-2">
-              {allLinesShown && scene.next && !scene.choices && (
-                <span className="text-cyan-400 text-xs font-game animate-bounce">▼ タップして進む</span>
-              )}
-              {!allLinesShown && (
-                <span className="text-gray-600 text-xs font-game">タップしてスキップ</span>
-              )}
-              {allLinesShown && scene.choices && scene.choices.length > 0 && (
-                <span className="text-amber-400 text-xs font-game animate-bounce">▼ 選択してください</span>
-              )}
+      {/* Text box + choices — 残りスペースを埋める */}
+      <div className="flex flex-col flex-1 min-h-0">
+        {/* Text area — タップで進む */}
+        <div
+          className="relative cursor-pointer"
+          onClick={!showChoices ? advance : undefined}
+        >
+          {scene.speaker && (
+            <div className="absolute -top-7 left-4 px-3 py-1 bg-cyan-900 border border-cyan-600 rounded text-cyan-300 text-sm font-game font-bold z-10">
+              {scene.speaker}
             </div>
           )}
+          <div className="bg-gray-900/95 border-t border-gray-600 px-4 pt-4 pb-2 min-h-[90px]">
+            <p className="text-gray-100 font-game text-sm sm:text-base leading-relaxed">
+              {displayedText}
+              {isTyping && <span className="animate-blink text-cyan-400">▌</span>}
+            </p>
+            {!showChoices && (
+              <div className="flex justify-end mt-2">
+                {allLinesShown && scene.next && !scene.choices && (
+                  <span className="text-cyan-400 text-xs font-game animate-bounce">▼ タップして進む</span>
+                )}
+                {!allLinesShown && (
+                  <span className="text-gray-600 text-xs font-game">タップしてスキップ</span>
+                )}
+                {allLinesShown && scene.choices && scene.choices.length > 0 && (
+                  <span className="text-amber-400 text-xs font-game animate-bounce">▼ 選択してください</span>
+                )}
+              </div>
+            )}
+          </div>
         </div>
 
-        {/* Choices */}
+        {/* Choices — スクロール可能 */}
         {showChoices && (
-          <div className="bg-gray-950/98 border-t border-amber-800 p-3 space-y-2">
+          <div className="flex-1 overflow-y-auto bg-gray-950/98 border-t border-amber-800 p-3 space-y-2">
             {visibleChoices.map((choice, i) => (
               <button
                 key={i}
                 onClick={() => applyChoice(choice)}
-                className="w-full text-left px-4 py-3 bg-gray-800 hover:bg-gray-700 border border-gray-600 hover:border-amber-500 rounded text-gray-100 font-game text-sm transition-all duration-150 hover:shadow-md"
+                className="w-full text-left px-4 py-3 bg-gray-800 active:bg-gray-700 border border-gray-600 active:border-amber-500 rounded text-gray-100 font-game text-sm transition-all duration-150"
               >
                 <span className="text-amber-400 mr-2">{i + 1}.</span>
                 {choice.label}

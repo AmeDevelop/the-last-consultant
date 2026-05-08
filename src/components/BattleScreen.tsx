@@ -272,13 +272,13 @@ export default function BattleScreen({ battle, background, introText }: Props) {
         </div>
       )}
 
-      {/* Enemy area */}
-      <div className="flex-1 flex flex-col items-center justify-center gap-4 p-6">
+      {/* Enemy area — モバイルでコンパクトに */}
+      <div className="flex-1 flex flex-col items-center justify-center gap-2 p-3 min-h-0">
         {/* Enemy status */}
         <div className={`text-center ${shake === 'enemy' ? 'shake' : ''}`}>
-          <div className="text-6xl mb-3">👾</div>
-          <p className="text-red-300 font-game font-bold text-lg mb-2">{battle.enemyName}</p>
-          <div className="w-48 h-3 bg-gray-700 rounded overflow-hidden mx-auto">
+          <div className="text-4xl sm:text-6xl mb-1">👾</div>
+          <p className="text-red-300 font-game font-bold text-base sm:text-lg mb-1">{battle.enemyName}</p>
+          <div className="w-40 sm:w-48 h-2 sm:h-3 bg-gray-700 rounded overflow-hidden mx-auto">
             <div
               className="h-full bg-gradient-to-r from-red-700 to-red-400 rounded transition-all duration-500"
               style={{ width: `${enemyHpPct}%` }}
@@ -286,14 +286,14 @@ export default function BattleScreen({ battle, background, introText }: Props) {
           </div>
           <p className="text-red-400 text-xs font-game mt-1">{enemyHp} / {battle.enemyMaxHp}</p>
           {battle.forced && (
-            <p className="text-yellow-600 text-xs font-game mt-1">（圧倒的な力の差を感じる……）</p>
+            <p className="text-yellow-600 text-xs font-game">（圧倒的な力の差を感じる……）</p>
           )}
         </div>
 
         {/* Battle log */}
-        <div className="w-full max-w-sm bg-gray-900/80 border border-gray-700 rounded p-3 min-h-[80px]">
+        <div className="w-full max-w-sm bg-gray-900/80 border border-gray-700 rounded p-2 sm:p-3 min-h-[60px] sm:min-h-[80px]">
           {battleLog.slice(-3).map((log, i) => (
-            <p key={i} className="text-gray-300 font-game text-sm leading-relaxed">{log}</p>
+            <p key={i} className="text-gray-300 font-game text-xs sm:text-sm leading-relaxed">{log}</p>
           ))}
           {(phase === 'victory' || phase === 'defeat' || phase === 'special') && (
             <p className="text-amber-400 font-game text-sm font-bold animate-pulse mt-1">
@@ -332,7 +332,7 @@ export default function BattleScreen({ battle, background, introText }: Props) {
 
         {/* Command menu */}
         {phase === 'player_turn' && subMenu === 'none' && (
-          <div className="grid grid-cols-4 gap-2 p-3">
+          <div className="grid grid-cols-4 gap-1.5 p-2 sm:p-3">
             {[
               { label: '⚔️ こうげき', action: doPlayerAttack },
               { label: '✨ スキル', action: () => setSubMenu('skill'), disabled: usableSkills.length === 0 },
