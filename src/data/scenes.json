@@ -593,14 +593,13 @@
       "battle": {
         "enemyId": "ai_maou_final",
         "enemyName": "AI魔王",
-        "enemyHp": 500,
-        "enemyMaxHp": 500,
-        "enemyAttack": 30,
-        "enemyDefense": 18,
+        "enemyHp": 250,
+        "enemyMaxHp": 250,
+        "enemyAttack": 20,
+        "enemyDefense": 8,
         "winScene": "bad_datacenter",
         "loseScene": "game_over",
-        "winCondition": "chikara",
-        "winStatThreshold": 20
+        "winCondition": "any"
       },
       "next": "bad_datacenter"
     },
@@ -617,14 +616,13 @@
       "battle": {
         "enemyId": "ai_maou_final",
         "enemyName": "AI魔王",
-        "enemyHp": 500,
-        "enemyMaxHp": 500,
-        "enemyAttack": 28,
-        "enemyDefense": 22,
+        "enemyHp": 250,
+        "enemyMaxHp": 250,
+        "enemyAttack": 18,
+        "enemyDefense": 10,
         "winScene": "good_victory",
         "loseScene": "game_over",
-        "winCondition": "kashikosa",
-        "winStatThreshold": 25
+        "winCondition": "any"
       },
       "next": "good_victory"
     },
@@ -641,10 +639,10 @@
       "battle": {
         "enemyId": "ai_maou_final",
         "enemyName": "AI魔王",
-        "enemyHp": 500,
-        "enemyMaxHp": 500,
-        "enemyAttack": 25,
-        "enemyDefense": 15,
+        "enemyHp": 200,
+        "enemyMaxHp": 200,
+        "enemyAttack": 16,
+        "enemyDefense": 6,
         "winScene": "true_co_creation_01",
         "loseScene": "game_over",
         "winCondition": "any",
